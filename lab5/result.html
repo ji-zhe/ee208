@@ -1,0 +1,22 @@
+$def with(command,name,form)		
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<form action="/s" method="GET">
+		$:form.render()
+	</form>
+	<h1>Search for "$command"</h1>
+	<hr />
+
+	<table>
+	$for each in name:
+		<tr>
+			<a href=$each['url'] style="font-size=14px;font-style:italic;font-weight:bold">$each['title']</a><br>
+			$each['keywords']<br>
+        	<font style="color:#99CC33">$each['url']</font><br><br><br>
+        </tr>
+	</table>
+
+</body>
