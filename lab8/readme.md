@@ -1,0 +1,2 @@
+# hadoop test
+calculate pi
